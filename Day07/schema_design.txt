@@ -1,0 +1,20 @@
+{
+    _id : object(),
+    author: 'John Smith',
+    book: [
+        {title: '7 habit', ISBN: '98458748', tag: 'ESDWE%ER', 
+            borrow: [
+                { student: 'Sovann Seung', borrowdate: '01-Jan-2019', returndate: '07-Jan-2019' },
+                { student: 'Jonh Cina', borrowdate: '01-Feb-2019', returndate: '07-Feb-2019' },
+                { student: 'Chan Thyda', borrowdate: '01-May-2019', returndate: '07-May-2019' }
+            ]
+        },
+        {title: 'How to be happy', ISBN: '9832876', tag: 'SESD&*#',
+            borrow: [
+                { student: 'Sovann Seung', borrowdate: '01-Jan-2019', returndate: '07-Jan-2019' },
+                { student: 'Jonh Cina', borrowdate: '01-Feb-2019', returndate: '07-Feb-2019' },
+                { student: 'Chan Thyda', borrowdate: '01-May-2019', returndate: '07-May-2019' }
+            ]
+        },
+    ]
+}
