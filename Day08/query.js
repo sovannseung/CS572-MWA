@@ -25,6 +25,13 @@ app.get('/A01', function(req, res){
     });
 });
 
+app.get('/A02', function(req, res){
+    collection.find().project({restaurant_id:1, name:1, district:1, cuisine:1})
+              .toArray(function(err, doc){
+                res.json(doc);
+              });
+});
+
 app.listen(8888, function(){
     console.log('server listen port 8888');
 });
