@@ -21,6 +21,7 @@ app.use((req, res, next)=>{
     }
 });
 
+// 1. Find all the zip codes in Washington state (WA)
 app.get('/A01', function(req, res){
     collection.aggregate([
         {$match: {state:'WA'}}
@@ -29,6 +30,7 @@ app.get('/A01', function(req, res){
     });
 });
 
+// 2. Find all the zip codes with a population less than 500
 app.get('/A02', function(req, res){
     collection.aggregate([
         {$match: {pop: {$lt:5000}}}
@@ -37,6 +39,7 @@ app.get('/A02', function(req, res){
     });
 });
 
+// 3. Find all citiest that have more than one zip code, sort the results by state and city name
 app.get('/A03', function(req, res){
     collection.aggregate([
         {$group: {_id: {state:'$state', city:'$city'},
@@ -50,6 +53,7 @@ app.get('/A03', function(req, res){
     });
 });
 
+// 4. Display the least populated city in each state
 app.get('/A04', function(req, res){
     collection.aggregate([
         {$group: {_id:{state:'$state', city:'$city'},
