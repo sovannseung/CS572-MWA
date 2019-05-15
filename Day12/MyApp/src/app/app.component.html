@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}
+  </h1>
+</div>
+<div>
+  <h1> Counter 1 </h1>
+  <app-counter [counter]=7 (outputEmitter)='showOutputData($event)'> </app-counter>
+</div>
+<div>
+  Data out from counter: {{outputData}}
+</div>
+
+<div>
+    <h1> Counter 2 </h1>
+    <app-counter2 [counter]=2 (outputEmitter)='showOutputData($event)'> </app-counter2>
+  </div>
+  <div>
+    Data out from counter: {{outputData}}
+  </div>
+
