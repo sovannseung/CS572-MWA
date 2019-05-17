@@ -4,6 +4,7 @@
     Welcome to {{ title }}
   </h1>
 </div>
+<h2> ***** Day 12 - Directive </h2>
 <div>
   <h1> Counter 1 </h1>
   <app-counter [counter]=7 (outputEmitter)='showOutputData($event)'> </app-counter>
@@ -15,8 +16,16 @@
 <div>
     <h1> Counter 2 </h1>
     <app-counter2 [counter]=2 (outputEmitter)='showOutputData($event)'> </app-counter2>
-  </div>
+</div>
   <div>
     Data out from counter: {{outputData}}
   </div>
 
+  <h2> ***** Day 13 - isVisible (Directive) </h2>
+  <div [appIsVisible]=true> Now, you should see me. appIsvisible=true </div>
+  <h2> ***** Day 13 - makeBigger (Directive) </h2>
+  <div appMakeBigger> Double click me to increase size 2px </div>
+  <h2> ***** Day 13 - multi (Pipe) </h2>
+  <div> string | multi: 3 = {{ 'String' | multi: 3}} </div>
+  <h2> ***** Day 13 - Smart & Dump </h2>
+  <app-smart></app-smart>
